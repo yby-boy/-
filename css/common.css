@@ -1,0 +1,293 @@
+    /* 公共的部分 */
+    
+    /* 快捷 导航模块*/
+.shortcut{
+    height: 31px;
+    line-height: 31px; /* 行高会在字体框的上下平均分配*/
+    background-color: #f1f1f1;
+    
+}
+
+.style_rend{
+    color: red;
+}
+
+.shortcut ul li{
+    float:left;
+    height: 20px;
+  
+}
+
+
+.f2 ul li{
+    float:right;
+}
+/* 选择所有的偶数小例 */
+.f2 ul li:nth-child(even){ 
+width: 1px;
+height: 12px;
+background-color: #666;
+margin: 9px 15px 0;
+}
+.arrow-icon::after{
+    /* 后面的内容*/
+content: '1'; 
+}
+
+                           /* header部分 */
+header{
+    position: relative; /*生成相对定位的元素，相对于其正常位置进行定位。
+
+    因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。*/
+     height: 200px;
+    background-color: pink;
+}
+.logo{
+    margin: 10px;
+    position: absolute; /*	
+    生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+    
+    元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。 */
+    width: 150px;
+    height: 100px;
+    top: 25px;
+    background-color: aqua;
+}
+.logo a{
+   
+    display: block; /* 块元素*/ 
+    width: 150px;
+    height: 100px;
+    background:url(../屏幕截图\ 2023-05-17\ 215814.png)  no-repeat; /* 背景不重复*/
+    /* font-size: 0;  京东的做法  隐藏文字 */
+    text-indent: -900px; /* 淘宝的做法*/
+    overflow: hidden; /* 溢出隐藏*/
+}
+/* 搜索 */
+.search{
+    position: absolute;
+    left: 360px;
+    top: 30px;
+    width: 538px;
+    height: 30px;
+  border:2px solid red;
+}
+.search input{
+    width: 495px;
+    height: 25px;
+    /* 手动去掉默认边框 */
+    border: 0;
+    /* 去掉蓝色边框 */
+    outline: none;
+    padding-left: 10px;
+}
+.search button{
+    float: right;
+    width: 36px;
+    height: 25px;
+    background-color: red;
+
+}
+.hotword{
+   position: absolute;
+   top:70px;
+   left:360px
+}
+.hotword a{
+    text-decoration: none; /* 取消a标签的下划线*/
+    margin: 0px 10px ;
+    color: black;
+}
+/* 购物车 */
+
+
+.car{
+    position: absolute;
+    top: 35px;
+    width: 150px;
+    height: 60px;
+    border: 1px solid #666;
+    background-color: #666;
+    right: 50px;
+    line-height: 60px;
+    text-align: center;
+}
+.car::before{
+    content: 'car';
+}
+/* 计数 */
+.count{
+    position: absolute;
+    width:auto;
+    height: 30px;
+    line-height: 14px;
+    text-align: center;
+    background-color: red;
+    right: 60px;
+    top: 20px;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+}
+.nav{
+    
+    position: absolute;
+    top: 160px;
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid rebeccapurple;
+   
+}
+.nav .zuo{
+    float: left;
+}
+.nav .you{
+    float: left;
+}
+/* 商品分类 */
+.zuo{
+    margin: 0 0 0 10px ;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 39px;
+    background-color: bisque; 
+    left: 10px;
+}
+
+
+ .zuo .dt {
+    width: 100%;
+    height: 100%;
+    color: black;
+    line-height: 39px;
+    text-align: center;
+
+} 
+.zuo .dd{
+    display: none;
+    width: 100%;
+    height: 240px;
+    background-color: red;
+}
+.dd ul li {
+    list-style-type:none; 
+    margin-left: 2px;
+}
+.dd ul li:hover {
+    background-color: #f1f1f1;
+}
+.dd ul li:hover a {
+   color: red;
+}
+ .dd ul li a{
+    list-style-type:none; 
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    
+}
+/* 商品分类的右侧 */
+.you{
+    left: 200px;
+    position: absolute;
+}
+.you a{
+    color: black;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* 底部 */
+.footer{
+    display: flex;
+    position: relative;
+    height: 400px;
+    background-color:azure;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.m{
+    display: flex;
+    position: absolute;
+    height: auto;
+    width: 100%;
+
+}
+
+.mode{
+    
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.mode ul li{
+    float: left;
+   list-style: none; /*去掉li的小圆点*/
+   width: 300px;
+   height: 50px;
+   padding-left: 150px;
+}
+.mode ul li h5{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    line-height: 50px;
+    text-align: center;
+ background:url(../屏幕截图\ 2023-05-17\ 215814.png) no-repeat;
+}
+/* 正品保障 */
+.mode1{
+   margin-right: 5px;
+}
+.s{
+    margin-top: 80px;
+    width: 100%;
+    height: 80px;
+    float: left;
+    
+}
+/* 购物指南 */
+
+.s div{
+    padding-left: 100px;
+    float: left;
+ padding-top: 20px;
+ width: 200px;
+   
+}
+.s ul {
+    padding: 1px;
+  margin-left: -21px;
+}
+.s ul li{
+   margin: 20px;
+    list-style: none;
+    margin-top: 10px;
+  
+}
+.s ul li a{
+  
+color: black;
+text-decoration: none;
+}
+/* 二维码 */
+.s .ewm h5{
+    width: 150px;
+    padding-left: 71px;
+}
+.s .ewm h4{
+    width: 150px;
+    padding-left: 71px;
+}
+.s .ewm{
+    text-align: center;
+}
+.s .ewm li{
+   margin-right: 60px;
+    margin-top: 10px;
+    height: 100px;
+    width: 150px;
+    background: url(../屏幕截图\ 2023-05-17\ 215814.png);
+}
